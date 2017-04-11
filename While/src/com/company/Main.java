@@ -27,18 +27,24 @@ public class Main {
 
         int startNum = 0;
         int finishNum = 50;
+        count = 0;
       while(startNum <=finishNum){
-            if (!isEvenNumber(startNum)) {
-                startNum+=1;
-                continue;
+            if (isEvenNumber(startNum)) {
+                System.out.println( startNum + " is an even number.");
+                count+=1;
+                if(count >= 5){
+                    break;
+                }
             }
-          System.out.println(startNum + " is an even number.");
-
+            else{
+                //System.out.println(i+  " is not an even number.");
+            }
+            startNum+=1;
         }
+        System.out.println("Total number of even numbers are " + count);
 
 
     }
-
     public static boolean isEvenNumber(int number){
         if(number == 0 || (number % 2  == 0)){
 
